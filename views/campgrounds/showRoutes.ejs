@@ -1,0 +1,128 @@
+<% include ../partials/header %>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">Show current routes</h1>
+                <p class="lead">Shows default REST Routes</p>
+            </div>
+        </div>
+
+        <h1> </h1>
+
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Path
+                </th>
+                <th>
+                    HTTP Verb
+                </th>
+                <th>
+                    Purpose
+                </th>
+                <th>
+                    Mongoose Method
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Index
+                </td>
+                <td>
+                    /campgrounds
+                </td>
+                <td>
+                    GET
+                </td>
+                <td>
+                    Show all Campgrounds
+                </td>
+                <td>Campgrounds.find()</td>
+            </tr>
+            <tr>
+                <td>
+                    Create
+                </td>
+                <td>
+                    /campgrounds
+                </td>
+                <td>
+                    POST
+                </td>
+                <td>
+                    Create a new campground, then Redirect Somewhere
+                </td>
+                <td>Campgrounds.create()</td>
+            </tr>
+            <tr>
+                <td>
+                    Show
+                </td>
+                <td>
+                    /campgrounds/:id
+                </td>
+                <td>
+                    GET
+                </td>
+                <td>
+                    Show stored info for a campground
+                </td>
+                <td>Campgrounds.findById()</td>
+
+            </tr>
+            <tr>
+                <td>
+                    Edit
+                </td>
+                <td>
+                    /campgrounds/:id/edit
+                </td>
+                <td>
+                    GET
+                </td>
+                <td>
+                    Show Edit form for a Campground
+                </td>
+                <td>Campgrounds.findById()</td>
+
+            </tr>
+            <tr>
+                <td>
+                    Update
+                </td>
+                <td>
+                    /campgrounds/:id
+                </td>
+                <td>
+                    PUT
+                </td>
+                <td>
+                    Update a Campground, then redirect
+                </td>
+                <td>Campgrounds.findByIdAndUpdate()</td>
+            </tr>
+            <tr>
+                <td>
+                    Destroy
+                </td>
+                <td>
+                    /campgrounds/:id
+                </td>
+                <td>
+                    DELETE
+                </td>
+                <td>
+                    Delete a Campground, then redirect
+                </td>
+                <td>Campgrounds.findByIdAndRemove()</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <% include ../partials/footer %>
